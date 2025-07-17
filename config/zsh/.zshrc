@@ -23,9 +23,20 @@ source ~/.zsh/scheduling.zsh
 # Powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Homebrew - Initialize only if not already configured
+if [ -z "$HOMEBREW_PREFIX" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # Syntax highlighting and autosuggestions
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Source plugins using the Homebrew prefix to avoid extra 'brew' calls
+if [ -f "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
+  source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
+
+if [ -f "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
+  source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+fi
 
 # Vi mode
 set -o vi
@@ -34,4 +45,4 @@ set -o vi
 eval "$(fzf --zsh)" 
 
 # bun completions
-[ -s "/Users/eric/.bun/_bun" ] && source "/Users/eric/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
