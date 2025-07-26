@@ -17,13 +17,13 @@ Este repositório contém as configurações de ambiente de desenvolvimento (`do
 - [Estrutura do Repositório](#estrutura-do-repositório)
 - [Licença](#licença)
 
-## 🏛️ Arquitetura do Sistema
+## Arquitetura do Sistema
 
 A arquitetura é baseada em um diretório `config` que armazena todas as configurações de forma categorizada. Scripts em `bash` orquestram a criação de links simbólicos, a instalação de dependências via `Homebrew` e a manutenção do ambiente.
 
 Para uma visão detalhada dos componentes, fluxos de dados e decisões de design, consulte o [documento de arquitetura](./ARQUITETURA.md).
 
-## ⚙️ Pré-requisitos
+## Pré-requisitos
 
 - **Sistema Operacional**: macOS
 - **Git**: Para clonagem do repositório.
@@ -31,7 +31,7 @@ Para uma visão detalhada dos componentes, fluxos de dados e decisões de design
 
 O **Homebrew** será instalado automaticamente pelo script `install.sh` se não for detectado.
 
-## 🚀 Instalação
+## Instalação
 
 ### 1. Clone o Repositório
 
@@ -72,7 +72,7 @@ Para garantir que todos os scripts e configurações funcionem como esperado, ex
 ./run-tests.sh
 ```
 
-## 🛠️ Scripts Principais
+## Scripts Principais
 
 | Script          | Descrição                                                                                             |
 | --------------- | ----------------------------------------------------------------------------------------------------- |
@@ -82,7 +82,7 @@ Para garantir que todos os scripts e configurações funcionem como esperado, ex
 | `validate.sh`   | Verifica se os links simbólicos foram criados corretamente.                                           |
 | `run-tests.sh`  | Executa os testes de regressão para garantir a estabilidade dos scripts.                                |
 
-## 📁 Estrutura do Repositório
+## Estrutura do Repositório
 
 ```
 .
@@ -103,6 +103,6 @@ Para garantir que todos os scripts e configurações funcionem como esperado, ex
 └── README.md              # Este arquivo
 ```
 
-## 📜 Licença
+## Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
