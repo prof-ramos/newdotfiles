@@ -21,9 +21,7 @@ Este repositório contém as configurações de ambiente de desenvolvimento (`do
 
 A arquitetura é baseada em um diretório `config` que armazena todas as configurações de forma categorizada. Scripts em `bash` orquestram a criação de links simbólicos, a instalação de dependências via `Homebrew` e a manutenção do ambiente.
 
-Para uma visão detalhada dos componentes, fluxos de dados e decisões de design, consulte o documento de arquitetura.
-
-➡️ **[Leia a documentação da Arquitetura](./ARQUITETURA.md)**
+Para uma visão detalhada dos componentes, fluxos de dados e decisões de design, consulte o [documento de arquitetura](./ARQUITETURA.md).
 
 ## ⚙️ Pré-requisitos
 
@@ -64,6 +62,14 @@ O script `validate.sh` verifica se todos os links simbólicos foram criados corr
 
 ```bash
 ./validate.sh
+```
+
+### 5. Execute os Testes (Opcional)
+
+Para garantir que todos os scripts e configurações funcionem como esperado, execute os testes de regressão.
+
+```bash
+./run-tests.sh
 ```
 
 ## 🛠️ Scripts Principais
